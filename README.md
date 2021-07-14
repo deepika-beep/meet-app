@@ -71,11 +71,13 @@ Given:user does not have an internet connection
 When:user changes the city,time range settings 
 Then:application display error message ‘unable to access data’
 
-4)	As a user ,I should be able to see the chart with no of upcoming events in each city,so I can have an idea what events are conducted in each city.
+4)As a user ,I should be able to see the chart with no of upcoming events in each city,so I can have an idea what events are conducted in each city.
 
 Scenario 1: Show a chart with the number of upcoming events in each city
 
 Given:event lists has been loaded
+
 When:enter name of the city
+
 Then:user can see the events happening in tse selected city
 

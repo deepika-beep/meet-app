@@ -17,7 +17,7 @@ describe('<Event /> component', () => {
     expect(eventWrapper.find('.event-time span')).toHaveLength(2);
   })
   test('render show details button',()=>{
-    expect(eventWrapper.find('btn-wrapper button')).toHaveLength(1);
+    expect(eventWrapper.find('.btn-wrapper button')).toHaveLength(1);
   })
 // toggle state to true
 test('show button toggle to true',() => {
@@ -48,6 +48,6 @@ test('hidden details are rendered properly',() => {
 // button text
 test('button text',()=> {
   eventWrapper.setState({showMore:true});
-  expect(eventWrapper.find('.btn-wrapper button').text()).toBe('show-less');
+  expect(eventWrapper.find('.btn-wrapper button').text()).toBe('Show less');
 });
 });

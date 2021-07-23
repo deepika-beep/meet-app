@@ -3,11 +3,13 @@ import './App.css';
 // imports the EventList component into the App component.
 import EventList from './EventList';
 import CitySearch from './CitySearch';
+import NumberOfEvents from './NumberOfEvents';
 function App() {
   return (
     <div className="App">
       <CitySearch/>
       <EventList/>
+      <NumberOfEvents/>
     </div>
   );
 }

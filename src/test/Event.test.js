@@ -21,28 +21,28 @@ describe('<Event /> component', () => {
   })
 // toggle state to true
 test('show button toggle to true',() => {
-eventWrapper.find('.btn-wrapper button').simulate(click);
+eventWrapper.find('.btn-wrapper button').simulate('click');
 expect(eventWrapper.state('showMore')).toBe(true);
 })
 // toggle state to false
 test('show button toggle to false',() => {
-  eventWrapper.find('.btn-wrapper button').simulate(click);
+  eventWrapper.find('.btn-wrapper button').simulate('click');
   expect(eventWrapper.state('showMore')).toBe(false);
 })
 // show details
 test('render details on click',() => {
-  eventWrapper.find('.btn-wrapper button').simulate(click);
+  eventWrapper.find('.btn-wrapper button').simulate('click');
   expect(eventWrapper.find('.show-more')).toHaveLength(1);
 })
 // hide details
 test('details are hiiden on click',() => {
-  eventWrapper.find('.btn-wrapper button').simulate(click);
+  eventWrapper.find('.btn-wrapper button').simulate('click');
   expect(eventWrapper.find('.show-more')).toHaveLength(0);
 })
 // check if event des is rendered properly in show-more div
 test('hidden details are rendered properly',() => {
   let description =mockData[0].description;
-  eventWrapper.find('.btn-wrapper button').simulate(click);
+  eventWrapper.find('.btn-wrapper button').simulate('click');
   expect(eventWrapper.find('.event-description').text()).toBe(description);
 })
 // button text

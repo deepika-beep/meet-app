@@ -25,7 +25,7 @@ class Event extends Component{
         <span>{event.summary}</span>
         <span>{event.location}</span>
         </div>
-// details div
+
 {this.state.showMore ? (
   <div className ='show-more'>
   <h4>About event</h4>

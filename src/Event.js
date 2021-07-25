@@ -43,6 +43,7 @@ class Event extends Component{
   }
 }
 export default Event;
+
 Event.propTypes ={
   event:PropTypes.shape({
     summary:PropTypes.string.isRequired,

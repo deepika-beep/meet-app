@@ -17,6 +17,7 @@ class EventList extends Component {
  }
 }
 export default EventList;
+
 EventList.propTypes ={
 events:PropTypes.array.isRequired
 }

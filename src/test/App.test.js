@@ -1,6 +1,6 @@
 
 import React from 'react';
-// mount used for integration testing
+// mount used for integration testing.
 import {shallow,mount} from 'enzyme';
 import App from '../App';
 import EventList from '../EventList';

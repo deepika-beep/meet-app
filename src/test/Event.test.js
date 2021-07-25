@@ -45,6 +45,7 @@ test('hidden details are rendered properly',() => {
   eventWrapper.find('.btn-wrapper button').simulate('click');
   expect(eventWrapper.find('.event-description').text()).toBe(description);
 })
+
 // button text
 test('button text',()=> {
   eventWrapper.setState({showMore:true});

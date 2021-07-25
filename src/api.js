@@ -62,7 +62,7 @@ const getToken = async (code) => {
 
   return access_token;
 };
-export const getAccessToken = async => {
+export const getAccessToken = async ()=> {
   const accessToken = localStorage.getItem('access_token');
   const tokenCheck = accessToken && (await checkToken (accessToken));
     if (!accessToken || tokenCheck.error) {

@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import PropTypes from 'prop-types';
 
 class Event extends Component{
 
@@ -42,3 +43,15 @@ class Event extends Component{
   }
 }
 export default Event;
+Event.propTypes ={
+  event:PropTypes.shape({
+    summary:PropTypes.string.isRequired,
+    start:PropTypes.shape({
+      dateTime:PropTypes.string.isRequired,
+      timeZone:PropTypes.string.isRequired
+    }).isRequired,
+    htmlLink:PropTypes.string.isRequired,
+    location:PropTypes.string.isRequired,
+    description:PropTypes.string.isRequired
+  })
+}

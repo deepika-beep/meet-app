@@ -3,6 +3,7 @@ import {shallow} from 'enzyme';
 import CitySearch from '../CitySearch';
 import { mockData } from '../mock-data';
 import {extractLocations} from '../api';
+
 describe('<CitySearch/>component',() => {
   let locations,CitySearchWrapper;
   beforeAll(()=> {
@@ -72,5 +73,16 @@ test('selecting a suggestion should hide the suggestion list',()=> {
   CitySearchWrapper.find('.suggestions li').at(0).simulate('click');
   expect(CitySearchWrapper.find('.suggestions').prop('style')).toEqual({display:'none'});
 });
-  
+test('when input is empty suggestion list should not be displayed',()=>{
+  const eventObject = {target:{value:''}};
+  CitySearchWrapper.find('.city').simulate('change', eventObject);
+  expect(CitySearchWrapper.state('showSuggestions')).toBe(undefined);
+  expect(CitySearchWrapper.find('.suggestions').prop('style')).toEqual({ display: 'none' });
+})
+test('when input is not empty,suggestion list should be displayed',()=>{
+  const eventObject = {target:{value:'b'}};
+  CitySearchWrapper.find('.city').simulate('change',eventObject);
+  expect(CitySearchWrapper.state('showSuggestions')).toBe(true);
+     expect(CitySearchWrapper.find('.suggestions').prop('style')).toEqual({});
+})  
 });

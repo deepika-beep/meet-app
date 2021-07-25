@@ -2,8 +2,14 @@
 .App {
   text-align: center;
   padding: 2% 5%;
+  background-color: #ffffff;
+  min-height: 100%;
+  width: 100%;
+  margin: 0 auto;
 }
-
+body{
+  background-color: rgba(185, 175, 224, 0.25);
+}
 .App * {
   box-sizing: border-box;
 }
@@ -84,7 +90,9 @@ input[type="number"] {
   border-radius: 4px;
   position: relative;
 }
-
+.event-wrapper{
+  border:1px solid rgba(83, 63, 160, 0.25);
+}
 .details-btn {
   position: absolute;
   right: 5px;
@@ -209,5 +217,16 @@ input[type="number"] {
     max-width: 50%;
     min-width: auto;
     margin: 0 auto;
+  }
+}
+@media screen  and (max-width:550px){
+  h1{
+    font-size: 20px;
+  }
+  h2{
+    font-size: 18px;
+  }
+  .App{
+    width: 100%;
   }
 }

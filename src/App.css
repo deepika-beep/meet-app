@@ -44,6 +44,8 @@ input[type="number"] {
 
 .city {
   width: 250px;
+  border: 2px solid rgba(185, 175, 224, 0.25);
+  line-height: 20px;
 }
 
 .CitySearch {
@@ -90,8 +92,18 @@ input[type="number"] {
   border-radius: 4px;
   position: relative;
 }
+#events-number-input {
+	padding: 4px;
+	line-height: 18px;
+  max-width: 100px;
+	width: 100%;
+}
 .event-wrapper{
   border:1px solid rgba(83, 63, 160, 0.25);
+  padding: 10px;
+}
+.EventList {
+	margin-top: 20px;
 }
 .details-btn {
   position: absolute;

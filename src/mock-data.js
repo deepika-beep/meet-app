@@ -79,6 +79,5 @@ const mockDataJson = [
   },
 ]
 // convert JSON to JS
-
 const mockData =JSON.parse(JSON.stringify(mockDataJson));
 export {mockData};

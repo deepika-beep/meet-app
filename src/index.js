@@ -23,4 +23,3 @@ serviceWorkerRegistration.unregister();
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 atatus.config('5a4d20eb57d849338536c24ce09f6cf8').install();
-// atatus.notify(new Error('Test Atatus Setup'));

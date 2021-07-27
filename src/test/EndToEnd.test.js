@@ -1,15 +1,14 @@
 import puppeteer from 'puppeteer';
-    jest.setTimeout(30000);
-
-describe('show/hide event details',()=> {
+jest.setTimeout(30000);
+describe('show/hide event details',() => {
   let browser;
   let page;
-  beforeAll(async () => {
 
-    const browser = await puppeteer.launch({
+  beforeAll(async () => {
+      browser = await puppeteer.launch({
       headless: false,
-   slowMo: 250, // slow down by 250ms
-  ignoreDefaultArgs: ['--disable-extensions'] // ignores default setting that causes timeout errors
+      slowMo: 250, // slow down by 250ms
+      ignoreDefaultArgs: ['--disable-extensions'] // ignores default setting that causes timeout errors
     });
     page = await browser.newPage();
     await page.goto('http://localhost:3000/');
@@ -64,6 +63,7 @@ describe('Filter events by city', () => {
     test('When user hasn\'t searched for a city, show upcoming events from all cities', async () => {    
         const events = await page.$('.event-wrapper');
         expect(events).toBeDefined();
+         });
     test('user should see a list of suggestion when they search for a city', async () => {
       const searchCity = await page.$('.city');
       await searchCity.type('input[name=value]', 'berlin');
@@ -74,5 +74,5 @@ describe('Filter events by city', () => {
          const suggestionsCityList = await page.$('.suggestions')
          expect(suggestionsCityList).toBeDefined();
       })
-    });
+   
   })

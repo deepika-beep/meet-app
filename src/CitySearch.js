@@ -56,7 +56,7 @@ class CitySearch extends Component{
        <h1>Meet App</h1>
         <h2>Select a City</h2>
         <InfoAlert text = {this.state.infoText}/>
-        <div className='.suggestion-wrapper'>
+        <div className='suggestion-wrapper'>
 
         <input type ="text" className="city" value ={this.state.query} onChange ={this.handleInputChanged} onFocus ={() => {this.setState({showSuggestions:true}) }}/>
         <ul className="suggestions" style ={this.state.showSuggestions? {}:{display:'none'}}>

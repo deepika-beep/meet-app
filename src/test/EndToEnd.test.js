@@ -11,7 +11,7 @@ describe('show/hide event details',() => {
       ignoreDefaultArgs: ['--disable-extensions'] // ignores default setting that causes timeout errors
     });
     page = await browser.newPage();
-    await page.goto('http://localhost:3000/');
+    await page.goto("http://localhost:3000/");
     await page.waitForSelector('.event-wrapper');
   });
 
@@ -19,13 +19,13 @@ describe('show/hide event details',() => {
     browser.close();
   });
 
-  test('an event element is collapsed by default',async()=> {
+  test('an event element is collapsed by default',async() => {
     const eventDetails = await page.$('.event-wrapper .show-more');
     expect(eventDetails).toBeNull();
 
   })
 
-  test('user can expand an event to see its details',async()=>{
+  test('user can expand an event to see its details',async() =>{
 
     await page.click('.btn-wrapper button');
     const eventDetails = await page.$('.event-wrapper .show-more');

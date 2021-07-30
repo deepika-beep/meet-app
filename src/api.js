@@ -21,10 +21,15 @@ export const getEvents = async() =>{
     NProgress.done();
 return mockData;
   }
+  //  if(!navigator.online){
+  //     const data =localStorage.getItem("lastEvents");
+  //      NProgress.done();
+  //      return data?JSON.parse(events).events:[];;
+  //   }
   const token = await getAccessToken();
   if (token) {
     removeQuery();
-    const url = 'https://1o29ypbgsa.execute-api.eu-central-1.amazonaws.com/dev/api/get-events' + '/' + token;
+    const url = "https://1o29ypbgsa.execute-api.eu-central-1.amazonaws.com/dev/api/get-events" + "/" + token;
     const result = await axios.get(url);
     if (result.data) {
       var locations = extractLocations(result.data.events);

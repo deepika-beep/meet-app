@@ -26,7 +26,7 @@ componentWillUnmount(){
 } 
 updateEvents = (location,eventCount) => {
 getEvents().then((events) => {
-  const locationEvents = (location == 'all') ? 
+  const locationEvents = (location === 'all') ? 
   events:
   events.filter((event)=> event.location === location);
   if(this.mounted){

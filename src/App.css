@@ -1,4 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
+  
+* {
+	margin: 5px;
+	padding: 0;
+	box-sizing: border-box;
+}
 .App {
   text-align: center;
   padding: 2% 5%;
@@ -15,8 +21,8 @@ body{
 }
 
 ul {
-  padding: 0;
-  list-style: none;
+
+  list-style-type: none;
 }
 
 p {
@@ -43,9 +49,10 @@ input[type="number"] {
 }
 
 .city {
-  width: 250px;
+  width: 100%;
   border: 2px solid rgba(185, 175, 224, 0.25);
   line-height: 20px;
+  padding: 5px;
 }
 
 .CitySearch {

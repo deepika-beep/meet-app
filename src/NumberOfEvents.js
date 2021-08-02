@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import {ErrorAlert} from './Alert';
 class NumberOfEvents extends Component{
   state = {
-    displayedEvents:32,
+    displayedEvents:this.props.displayedEvents,
     errorText:''
   }
   handleInput = (e) => {
     let value = e.target.value;
-    if (value === '' || value < 1){
+    if (value < 1){
       this.setState({
         displayedEvents:value,
         errorText:'Please enter value greater than zero'
@@ -30,11 +30,15 @@ class NumberOfEvents extends Component{
     this.props.updateEventsLength(value);   
     }
   }
+  resetInput = (e) => {
+        e.target.value = '';
+    }
   render(){
     return(
       <div className='events-number'>
         <label htmlFor='events-number-input'>choose number of events to see</label>
-        <input type='number' id='events-number-input' value={this.state.displayedEvents} onChange={(e) => this.handleInput(e)}/>
+        <input type='number' id='events-number-input' value={this.state.displayedEvents} onChange={(e) => this.handleInput(e)}
+          onFocus={(e) => this.resetInput(e)}/>
         <ErrorAlert text = {this.state.errorText}/>
         </div>
     )

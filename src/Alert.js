@@ -31,8 +31,26 @@ class ErrorAlert extends Alert{
     this.color = 'red';
   }
 }
+class WarningAlert extends Alert {
+    constructor(props) {
+        super(props);
+        this.color = 'white'
+    }
+    getStyle = () => {
+        return {
+            color: this.color,
+            backgroundColor: '#fff',
+            width: '100vw',
+            display: 'block',
+            lineHeight: '2rem',
+            position: "fixed",
+            top: '0',
+            left:'0',
+        }
+        };
+    }
 // to use in Citysearch
-export {InfoAlert,ErrorAlert};
+export {InfoAlert,ErrorAlert,WarningAlert};
 Alert.propTypes={
 text:PropTypes.string.isRequired
 }

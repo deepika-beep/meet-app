@@ -4,6 +4,7 @@ function WelcomeScreen(props) {
 return props.showWelcomeScreen ?
 (
 <div className="WelcomeScreen">
+  <div className="content">
 <h1>Welcome to the Meet app</h1>
 <h4>
 Log in to see upcoming events around the world for
@@ -35,6 +36,7 @@ rel="nofollow noopener"
 Privacy policy
 </a>
 </div>
+ </div> 
 )
 : null
 }
